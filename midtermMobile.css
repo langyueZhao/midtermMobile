@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 3vmin 6vmin 0vmin 6vmin;
+  background-color: #eee;
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: black;
+}
+
+p, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-weight: lighter;
+  font-size: 3vmin;
+  line-height: 5vmin;
+  letter-spacing: -0.05em;
+  word-spacing: 0.2em;
+}
+
+h1 {
+  font-size: 5vmin;
+  padding: 0vmin 2vmin 0vmin 2vmin;
+}
+
+.mainGrid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 2.5vmin;
+  grid-row-gap: 6vmin;
+}
+
+.mainGrid * {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.fullWidth {
+  grid-column-end: span 8;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 2vmin 3vmin 2vmin 3vmin;
+  margin-bottom: 1vmin;
+}
+a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.menu a {
+  /* text-transform: uppercase; */
+  font-weight: bolder;
+  color: white;
+}
+.breaker {
+  border-bottom: 1vmin solid #222;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .wide-img {
+    width: 100%;
+  }
+
+  .item-4x2 {
+    grid-column-end: span 4;
+    font-size: 25px;
+    font-weight: bolder;
+    /* grid-row-end: span 0; */
+  }
+
+  .item-4x4 {
+    grid-column-end: span 4;
+    grid-row-end: span 0.5;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body{
+    color: #eee;
+    background-color: black;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 1vmin 3vmin 2vmin 1vmin;
+    margin-bottom: 1vmin;
+  }
+  a {
+    text-decoration: underline;
+    font-size: 30px;
+  }
+  .breaker {
+    border-bottom: 2vmin solid #222;
+  }
+  .fullWidth {
+    grid-column-end: span 4;
+  }
+  h1 {
+    font-size: 5vmin;
+    font-weight:bolder;
+    padding: 1vmin 3vmin 0vmin 0vmin;
+  }
+  p {
+    font-weight: lighter;
+    font-size: 10px;
+    line-height: 4vmin;
+    letter-spacing: -0.05em;
+    word-spacing: 0em;
+  }
+  .wide-img {
+    width: 100%;
+  }
+
+  .item-4x2 {
+    grid-column-end: span 8;
+    font-size: 25px;
+    font-weight: bolder;
+    /* grid-row-end: span 0; */
+  }
+
+  .item-4x4 {
+    grid-column-end: span 8;
+    grid-row-end: span 0.5;
+  }
+}
